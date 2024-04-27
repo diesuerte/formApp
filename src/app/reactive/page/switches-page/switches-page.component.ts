@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'reactive-switches-page',
@@ -8,7 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class SwitchesPageComponent implements OnInit{
 
-  public myform = this.fb.group({
+  public myform: FormGroup = this.fb.group({
     gender: ['M', [Validators.required]],
     wantNotification:[true, Validators.required],
     termsAndCondition:[false, Validators.requiredTrue]

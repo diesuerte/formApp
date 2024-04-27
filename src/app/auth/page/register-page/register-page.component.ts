@@ -31,7 +31,7 @@ export class RegisterPageComponent {
 
   isValidFiel( field:string ) {
 
-    this.validator.isValidField( this.myform, field )
+    return this.validator.isValidField( this.myform, field )
 
   }
 }
